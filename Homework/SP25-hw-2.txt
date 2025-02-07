@@ -1,0 +1,33 @@
+﻿CISC 3300 SP25 
+Homework 2 
+
+
+1. What do the id and class attributes do? How are they alike and different? 
+The HTML id attribute is used to specify a unique id for sn HTML element. The HTML attribute is used to specify a class for an HTML element. The id/class attributes are often used to point to an id/class name in a style sheet. It can also be used by a Javascript to access and manipulate elements with the specific id/class name.
+
+
+2. What are the parts of a CSS rule? 
+A CSS rule contains two parts: a selector and a declaration. CSS declarations are inside curly brackets and have a property and a value and apply a visual effect. CSS selectors are used to find or select the HTML elements you want to style.
+
+
+
+
+3. Explain how CSS rules cascade. 
+If two or more CSS rules point to the same element, the selector with the highest specificity will “win”, and its style declaration will be applied to that HTML element. A child element will naturally inherit properties from its parent element. If two more CSS rules point to the same element and are equally specific, the rule applied last with “win”. Finally, the important keyword will trump anything.
+
+
+4. Contrast display: block, inline, inline-block. 
+Display: inline displays an element as an inline element. Any height and width properties will have no effect and are the default. Display: block displays an element as a block element. It starts on a new line and takes up the whole width. Display: inline-block displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.
+
+
+
+
+5. What are border, padding, and margin? 
+Borders separates the edge of one box from another. Margins sit outside the edge of the border. You can set the width of a margin to create a gap between the borders of two adjacent boxes. Padding is the space between the border of a box and any content contained within it. 
+
+
+6. Let’s improve our fake business webpage from the first homework: 
+a. Make a full width header div with a centered row of links and a border. The links can route to ‘#’. Give the header a background color and the links a foreground color. 
+b. Create a logo with a fancy font from google fonts and some color. And set a google font for the text of the rest of your webpage. 
+c. Every item on the page should have adequate margin/padding. 
+d. Try to think about the usability principles we have discussed in class; try to make the design choices increase the usability of the page.

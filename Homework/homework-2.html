@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Maple's Media</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <style> 
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color:rgb(165, 69, 69);
+            }
+
+            .header {
+                background-color: rgb(211, 112, 112);
+                padding: 20px;
+                border-bottom: 10px solid rgb(78, 30, 30);
+    
+            }
+
+            .header .container {
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                place-items: center;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                
+            }
+
+            .nav-links li {
+                margin: 0 20px;
+                
+            }
+
+            .nav-links a {
+                text-align: center;
+                color:rgba(40, 10, 10, 0.529);
+                font-weight: 1000;
+                font-size: 25px;
+                padding: 10px 15px;
+            }
+                
+            
+
+            .nav-links a:hover {
+                background-color: rgb(236, 178, 183);
+                border-radius: 4px;
+            }
+
+            .logo {
+                font-family:'Pacifico', cursive;
+                font-size: 75px;
+                color:#4e0707;
+                text-align: center;
+                place-items: center;
+                margin: 0;
+            }
+
+            .content {
+                padding: 20px;
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            fieldset {
+                border: 5px solid #630709;
+                padding: 20px;
+                margin-top: 20px;
+                border-radius: 5px;
+            }
+
+            label, input {
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            } 
+
+            input[type="submit"] {
+            background-color: #cb6767;
+            color: rgb(10, 2, 2);
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+            background-color: #eca2a2;
+            }
+
+            img {
+            margin-top: 20px;
+            border-radius: 8px;
+            width: 350px;
+            height: 450px;
+            }
+
+        </style>
+    </head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                Maple's Media
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+    <h1>Maple's Media</h1>
+    <br>
+    <p>At Maple's Media, we specialize in creating, distributing, and managing high-quality
+        content across a variety of platforms, including TV, radio, digital, print, and social media. Our mission is to
+        inform, entertain, and engage audiences while delivering impactful advertising solutions.
+    </p>
+    <br>
+    <h3>Content Creation</h3>
+    <br>
+    <p>We create visually engaging content like videos, animations, documentaries, and graphics. Whether it’s for TV,
+        online streaming, social media, or other platforms, our team of videographers, animators, and graphic designers
+        work to produce eye-catching visuals that tell stories in dynamic ways.
+    </p>
+    <br>
+    <h3>Photos</h3>
+    <img src="Images/camera.jpg" alt="camera">
+    <br><br>
+    <h3>Contact Us</h3>
+    <form onsubmit="myFunction">
+        <fieldset>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>   
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="submit" value="Submit">
+           </fieldset>
+    </form>
+    </div>
+</body>
+
+</html>
