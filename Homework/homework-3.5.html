@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fordham University</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Raleway', serif;
+            background-color: rgb(255, 255, 255);
+            font-size: 140%;
+            color: rgba(71, 26, 26, 0.814);
+        }
+
+        h1 {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: maroon;
+            font-size: 300%;;
+        }
+
+        h5 {
+            font-size: 100%;
+        }
+
+        .highlight-1 {
+            color: maroon;
+        }   
+
+        .highlight-underline {
+            color: maroon;
+            text-decoration: underline;
+        
+        }
+
+        .left-section p:nth-of-type(1) {
+            font-weight: 600;
+            color: maroon;
+        }
+
+        .left-section p:nth-of-type(2){
+            color: rgb(64, 60, 60);
+            background-color: rgba(192, 192, 179, 0.925);
+            height: 80px;
+            padding-top: 15px;
+            padding-left: 15px;
+            border-left: 3px solid maroon;
+            
+        }
+
+        .left-section p:nth-of-type(3){
+            color: White;
+            background-color: maroon;
+            height: 80px;
+            text-align: center;
+            padding-top: 25px;
+            font-weight: 600;
+            font-size: 125%;
+            
+        }
+
+
+
+
+        .right-section p:nth-of-type(4) .text-container{
+            font-size: 130%;
+        }
+
+        .right-section p:nth-of-type(1),
+        .right-section p:nth-of-type(2),
+        .right-section p:nth-of-type(3){
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            line-height: 1.4; /* Adjust this for desired spacing */
+            color:rgba(71, 26, 26, 0.814)
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left-section {
+            width: 25%;
+            padding: 40px;
+            font-family: 'Railway', serif;
+            background-color: rgb(255, 255, 255);
+            font-size: 75%;
+            color:rgba(71, 26, 26, 0.814)
+
+            
+        }
+
+        .right-section {
+            width: 70%;
+            padding-right: 90px;
+            font-family: 'Railway', serif;
+            background-color: rgb(255, 255, 255);
+            font-size: 75%;
+            color:rgba(71, 26, 26, 0.814)
+        }
+
+        .align-right {
+            float: right;
+            padding-left: 15px;
+        }
+
+        .divider {
+            width: 1px;
+            background-color: #000;
+            height: 100%;
+        }
+
+        .navbarheader1 {
+            background: white;
+            color: maroon;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 55px;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbarheader2 {
+            color: white;
+            background-color: maroon;
+            font-family: 'Raleway', serif;
+            height: 85px;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #1f1e1e;
+        }
+
+        .nav-link {
+            font-family: 'Raleway', serif;
+            font-weight: bold;
+            font-size: 15px;
+            color: rgba(255, 254, 252, 0.895);
+        }
+
+        .nav-link:hover {
+            color: #dce19eee;
+        }
+
+        .navbar .dropdown-toggle::after {
+            display: none;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            background-color: #1f1e1e;
+        }
+
+        .dropdown-item {
+            font-family: 'Raleway', serif;
+            color: white;
+            border-bottom: 1px solid rgb(53, 50, 50);
+        }
+
+        .dropdown-item:hover {
+            background-color: #1f1e1e;
+        }
+
+        .btn-outline-success {
+            color: #4e0707;
+            border-color: #4e0707;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #cb6767;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .fas.fa-search {
+        font-size: 20px;  
+        color: white;  
+        margin-left: 30vmax;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbarheader1">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">FORDHAM UNIVERSITY</span>
+        </div>
+    </nav>
+    <nav class="navbarheader2">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Undergraduate Admission</span>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Why Fordham
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Finding Your Academic Home at Fordham</a></li>
+                            <li><a class="dropdown-item" href="#">Finding Your Community at Fordham</a></li>
+                            <li><a class="dropdown-item" href="#">New York is My Campus</a></li>
+                            <li><a class="dropdown-item" href="#">A Jesuit Education</a></li>
+                            <li><a class="dropdown-item" href="#">Sustainability at Fordham</a></li>
+                            <li><a class="dropdown-item" href="#">Admissions and Diversity</a></li>
+                            <li><a class="dropdown-item" href="#">Admisison Facts</a></li>
+                            <li><a class="dropdown-item" href="#">Understanding the Financial Aid Process at Fordham</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Majors and Minors
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">What's Your Passion</a></li>
+                            <li><a class="dropdown-item" href="#">Accelerated Degree Programs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Choose Your Campus
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Lincoln Center</a></li>
+                            <li><a class="dropdown-item" href="#">Rose Hill</a></li>
+                        </ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Outcomes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Leading Industries Statistics</a></li>
+                            <li><a class="dropdown-item" href="#">Top Hiring Employers Statistics</a></li>
+                            <li><a class="dropdown-item" href="#">Public Service Statistics</a></li>
+                            <li><a class="dropdown-item" href="#">Fordham Internship Promise</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Visit
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">On-Campus Visit Options</a></li>
+                            <li><a class="dropdown-item" href="#">Information Session with Tour</a></li>
+                            <li><a class="dropdown-item" href="#">Guided Tours</a></li>
+                            <li><a class="dropdown-item" href="#">Virtual Visit Options</a></li>
+                            <li><a class="dropdown-item" href="#">Virtual Tour</a></li>
+                            <li><a class="dropdown-item" href="#">Group Tour Visit Options</a></li>
+                            <li><a class="dropdown-item" href="#">Counselor Visit Options</a></li>
+                            <li><a class="dropdown-item" href="#">Self-Guided Walking Tours</a></li>
+                            <li><a class="dropdown-item" href="#">Virtual Ram Sessions Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Apply
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">How to Apply</a></li>
+                            <li><a class="dropdown-item" href="#">Dates and Deadlines</a></li>
+                            <li><a class="dropdown-item" href="#">Admission Facts</a></li>
+                            <li><a class="dropdown-item" href="#">What We're Looking For</a></li>
+                            <li><a class="dropdown-item" href="#">Transfer Credits(AP/IB)</a></li>
+                            <li><a class="dropdown-item" href="#">COVID-19 Impact</a></li>
+                            <li><a class="dropdown-item" href="#">Costs and the Return on Your Investment</a></li>
+                            <li><a class="dropdown-item" href="#">Financial Aid</a></li>
+                            <li><a class="dropdown-item" href="#">Scholarships and Grants</a></li>
+                            <li><a class="dropdown-item" href="#">SUmmer Programs for High School Students</a></li>
+                            <li><a class="dropdown-item" href="#">Virtual Ram Sessions Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            International Students
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">International Transfer Students</a></li>
+                            <li><a class="dropdown-item" href="#">Visiting International Students</a></li>
+                            <li><a class="dropdown-item" href="#">International FAQs</a></li>
+                            <li><a class="dropdown-item" href="#">Global Visit Schedule</a></li>
+                            <li><a class="dropdown-item" href="#">Visa Process</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Transfer Students
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">How to Apply</a></li>
+                            <li><a class="dropdown-item" href="#">Transfer Credit</a></li>
+                            <li><a class="dropdown-item" href="#">Costs and Financing Options</a></li>
+                            <li><a class="dropdown-item" href="#">Scholarships and Financial Aid</a></li>
+                            <li><a class="dropdown-item" href="#">International Transfer Students</a></li>
+                            <li><a class="dropdown-item" href="#">Visiting Students</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contact Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Admission Counselors</a></li>
+                            <li><a class="dropdown-item" href="#">Request Information</a></li>
+                            <li><a class="dropdown-item" href="#">Info for Prospective Families</a></li>
+                            <li><a class="dropdown-item" href="#">Info for Counselors</a></li>
+                            <li><a class="dropdown-item" href="#">Info for Veterans</a></li>
+                            <li><a class="dropdown-item" href="#">Chat with our Ambassadors</a></li>
+                        </ul>
+                    </li>
+                    
+                    <button class="btn btn-link ms-auto">
+                        <i class="fas fa-search"></i> 
+                    </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="left-section">
+            <p>Majors and Minors</p>
+            <p>What's Your Passion?<br>Accelerated Degree Programs</p>
+            <br><br>
+            <p>Majors and Minors</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h5>Home / Admissions and Aid / Undergraduate Admission / Majors and Minors / <span class="highlight-1">Computer Science</span></h5>
+            <h1>Computer Science</h1>
+            <p>Degree Options: Major, Minor</p>
+            <p>Locations: Lincoln Center, Rose Hill</p>
+            <p>Visit the <span class ="highlight-underline">Computer and Information Science Department</span></p>
+            <br>
+            <p><span class="text-container">Where there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing or simply
+                using it. Be that person.</span></p>
+                <div class="text-with-image">
+                    <p><img src="Images/fordhamCS.jpg" alt="chip" width="175px" height="175px" class="align-right"/>
+                        It’s difficult to imagine life without computers when they’re so central to our information-driven global
+                        society. But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in
+                        computer science from Fordham’s department of Computer and Information Sciences.
+                    <br><br>The computer science major emphasizes science and technology, including software design and programming,
+                        computer architecture and functions, and the development of an ability to analyze and solve problems in
+                        using the computer as a tool.</p>
+                        <br>
+            <p>Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. Video game design. Cyber
+                security. Networking. Database management. Health and medical informatics.</p>
+            <br>
+            <p>Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact.
+                Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.</p>
+            <br>
+            <p>You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics,
+                languages, and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal
+                arts education. We want you to excel in your field—and as a human being</p>
+                <br>
+        </div>
+    </div>
+
+</body>
+
+</html>
