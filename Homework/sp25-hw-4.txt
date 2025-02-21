@@ -1,0 +1,28 @@
+﻿CISC 3300 S25 
+Homework 4 
+1. How does an interpreted programming language differ from a compiled language? 
+A compiled programming language is expressed in the instructions of the target machine when the program is compiled. The machine code is undecipherable by humans.C++, C, and Java are examples of compiled programming languages. Compiled language codes are also faster than interpreted language codes. In an interpreted language, the target machine does not translate the source code. Instead, the interpreter reads and executes the code. It is also more flexible and offers features like dynamic typing and smaller programming size. Javascript, Python, and PHP are examples of interpreted languages.
+2. Contrast dynamically typed programming languages with statically typed ones. And contrast strongly typed programming languages with weakly typed ones. 
+In dynamically typed programming languages, type checking is performed at runtime, so the type of variable can change over its lifetime. The type is bound to the variable in statically typed ones, and the types are checked at the compiled time. In strongly typed programming, type discipline is enforced by the compiler. In weakly typed ones, different data types are recognized but aren't used too strictly. When reasonable, it may convert data types.
+
+
+3. What is the difference between var, let, and const when declaring variables in JS? 
+When declaring variables, var is more old school, redeclarable, global and function scoped. Let is block scoped, and redeclarable. Const is also block scoped but not redeclarable.
+
+
+4. What are anonymous functions? Higher order functions? Callback functions? First-class functions? 
+Anonymous functions are functions without a name. Higher-order functions are functions that return a function or take other functions as arguments. Callback functions are passed as an argument to another function to be called later. First-class functions are functions that are treated like other variables.
+5. Define objects in JavaScript. 
+Objects are nonprimitive data types. They are a collection of properties. A property is an association between a name and a value. They are a data structure consisting of key-value pairs like a map in C++.
+
+
+6. Loop through the cats array variable found here: 
+https://github.com/cisc3300/SP25-lecture-code/blob/main/2-13-lecture/cats.js
+a. if the cats adoption status is available add that cat’s name to a result array
+b. create a new sentence about your newly adopted cats from your result array via the join array function. 
+7. Create a variable that sets a value via a ternary operator. Use Math.random() * 10, which will output a random number from 1 to 10, to set the variable’s value as a string of “greater than five!” if the output from Math.random() * 10 is greater than 5, and “less than five!” if the output is less than 5. 
+8. Loop through the values of the cat object variable found here: 
+https://github.com/cisc3300/SP25-lecture-code/blob/main/2-13-lecture/cats.js. Console.log the value of each property in the loop. 
+9. Write two if statements, pick the correct comparison operator to have the first if statement equate an integer of 1 and a string of ‘1’ as true. And pick the correct comparison operator to have the second equate an integer of 1 and a string of ‘1’ as false. 
+10. Using the map function create a new array via the cats array used in question 6. Pass the map function a callback function that accepts each element of the array as a parameter. Return the value of the name property of each object in the cats array concatenated with the string “ is cute!”. The output should be an array of “Charlie is cute!”, “Lily is cute!”, etc. 
+Include questions 6-10 in a single JavaScript file or HTML file via a script tag.

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats!</title>
+</head>
+
+<body>
+    <h1>Cats!</h1>
+
+    <script src="cats.js"></script>
+
+    <script>
+        let result = [];
+
+        cats.forEach(cat => {
+            if (cat.adoptionStatus === 'available') {
+                result.push(cat.name);
+            }
+        });
+
+        let sentence = `The cats that aren't adopted yet are: ${result.join(', ')}.`;
+        console.log(sentence);
+
+        let randomNumber = Math.random() * 10;
+        let resultMessage = randomNumber > 5 ? "greater than five!" : "less than five!";
+        console.log(resultMessage);
+
+        cats.forEach(cat => {
+            for (let key in cat) {
+                console.log(cat[key]);
+            }
+        });
+
+        if (1 == '1') {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        if (1 === '1') {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        const cuteCats = cats.map(cat => {
+            return cat.name + " is cute!";
+        });
+
+        console.log(cuteCats);
+    </script>
+</body>
+
+</html>
