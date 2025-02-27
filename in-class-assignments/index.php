@@ -2,25 +2,20 @@
 
 header("Access-Control-Allow-Origin: *");
 
+
 $uri = strtok($_SERVER["REQUEST_URI"], '?');
 
 $uriArray = explode("/", $uri);
 
-if ($uriArray[1] === 'json' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($uriArray[1] === 'response' && $_SERVER['REQUEST_METHOD'] === 'GET') {
 
-    $json = [
-        'message' => 'Hi! Have a great day!'
+    $button = [
+
+        'message' => 'DATA FROM PHP'
     ];
 
-    echo $json['message'];
+    echo json_encode($button);
     exit();
 }
-
-else if ($uriArray[1] === 'html' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    echo '
-        <div>
-            <p>Have a great weekend</p>
-        </div>
-    ';
-}
+include 'in-class-13.html'
 ?>
