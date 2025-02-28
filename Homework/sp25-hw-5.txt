@@ -1,0 +1,30 @@
+﻿CISC 3300 S25 
+Homework 5 
+1. What is the DOM? What is meant by the DOM tree? 
+The DOM is a programming interface for web documents. DOM stands for Document Object Model and is an API(application programming interface). It represents the page so that programs can change the document structure, style, and content. The DOM tree is a model of the webpage and consists of four different main types of nodes: document nodes(the page), element nodes(individual elements), attribute nodes(attributes), and text nodes(text).
+
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+An XSS attack, or a Cross-Site Scripting attack, is when an attacker can access users' accounts from your page. They could add code to an input imputed as HTML and have it run for your users. When you have certain content to be treated as HTML, it should rarely have the option to show input that came from a user. If you have to have it, you should validate that input and strip it of potential malicious intent by removing tags, escaping characters, etc.
+
+
+3. What is an event in JavaScript? What kind of events can you respond to with code? 
+HTML events are things that happen to HTML elements. They trigger code that we can react to(trigger JS code). Some events are UI events, keyboard events, mouse events, focus events, form events, and mutation events.
+
+
+4. How does a DOM eventListener work? What are the parameters it is expecting? 
+A DOM eventListener can deal with more than one function at a time. It sets up a function that will be called whenever the specified event is delivered to the target. It listens for the event by name. The parameters are the event type and the function.
+
+
+5. What is jQuery? Why use it? How do we load jQuery onto a page? 
+jQuery is a lightweight Javascript library. The purpose is to make it easier to use Javascript on the website. It takes a lot of common tasks that may require many lines and wraps them into methods that you can call with a single line of code.  We use a CDN(content delivery network) to load jQuery onto a webpage.
+
+
+6. What is AJAX? JSON? The HTTP method types and what they do? 
+AJAX (Asynchronous Javascript and XML) allows webpages to be updated asynchronously by exchanging data with a web server behind the scenes. This makes it possible to update parts of a webpage without reloading the whole page. JSON(Javascript object notations) is a text-based data format following Javascript object syntax that uses human-readable text to store and transmit data objects consisting of attribute-value pairs and arrays. HTTP method types are GET(retrieve data), POST(submits an entity to the specified resource. Causing a change in state or side effects on the server, creating a new resource), PUT(replaces all current representations of the target resource with the request payload, updates everything got a resource), PATCH(partially modified a resource), DELETE(deletes a resource).
+7. Write some data in the JSON format. You can use this site https://jsonformatter.org/ to check if it’s in the right format, making use of the “validate” button. 
+8. Create a webpage that contains an unordered list element which contains several list item elements. If a list item is clicked, change the color of it. Each list item should have a different color. 
+9. Create a webpage that contains a button. Write jQuery code so that when the button is clicked an HTTP GET request is sent to a PHP backend. From the PHP backend(reference the php-project code found here: 
+https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return a json encoded associative array of data pertaining to your fake business. Make sure that it has at least a name and a price. Use the response returned on the frontend to create a div element for each piece of data, show the name and price of each item and give the elements some style. 
+10. Create a webpage that contains a form element with some input elements. Write jQuery code so that when the form is submitted an HTTP POST request is sent to a PHP backend. From the PHP backend(reference the php-project code found here: 
+https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return an associative array with data for a success message that is JSON encoded. Use the response to create an HTML element that contains the message data, give it some proper styling.

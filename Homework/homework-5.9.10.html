@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Items & Form Submission</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #1a73e8;
+            text-align: center;
+        }
+
+        .centered-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #ajax-get {
+            background-color: #1a73e8;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #ajax-get:hover {
+            background-color: #005cbf;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #ajax-get:active {
+            background-color: #004b9f;
+            transform: scale(1);
+        }
+
+        #price-message {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #eca2a2;
+        }
+
+        .success-message {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Our Business</h1>
+    <p style="text-align: center;">Click the button below to view how much it costs for 15 prints!</p>
+
+    <div class="centered-button">
+        <button id="ajax-get" class="clicker">15 prints!</button>
+    </div>
+    <div id="cars-container"></div>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Sign In</h2>
+        <form class="row g-3" id="myForm">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email" name="email">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password"
+                    name="password">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                    name="address2">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="Enter your city" name="city">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select" name="state">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="Enter zip code" name="zip">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" name="check">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+        </form>
+
+        <div id="response" class="success-message"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $('#ajax-get').on('click', function () {
+            $.ajax({
+                url: 'http://localhost/response',
+                type: 'GET',
+                dataType: 'json',
+                success: function (response) {
+                    let itemDiv = $('<div class="item"></div>');
+                    itemDiv.append('<h3>' + response.name + '</h3>');
+                    itemDiv.append('<p>' + response.price + '</p>');
+                    itemDiv.css({
+                        'background-color': '#fff',
+                        'padding': '20px',
+                        'border-radius': '8px',
+                        'text-align': 'center',
+                        'margin': '10px'
+                    });
+                    $('#cars-container').append(itemDiv);
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+
+        $('#myForm').on('submit', function (e) {
+            e.preventDefault();
+
+            const formData = $(this).serialize();
+
+            $.ajax({
+                url: 'http://localhost/form',
+                type: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    $('#response').text(response.message).fadeIn();
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

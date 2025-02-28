@@ -1,0 +1,9 @@
+{
+    "Name": "Jasmin",
+    "Eye color": "green",
+    "Hair color": "brown",
+    "Birthday": {
+      "Month": "July",
+      "Day": "26"
+    }
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+</head>
+
+<body>
+
+    <div id="list-container">
+        <ul id="ul">
+            <li class="list-item" id="first-list-item">
+                first item
+            </li>
+            <li class="list-item">
+                second item
+            </li>
+            <li class="list-item">
+                third item
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const listItems = document.querySelectorAll('.list-item');
+        const colors = ['purple', 'red', 'blue'];
+
+        listItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                item.style.color = colors[index];
+            });
+        });
+    </script>
+
+</body>
+
+</html>
