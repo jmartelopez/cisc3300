@@ -1,0 +1,10 @@
+﻿CISC 3300 F24
+In class assignment 3
+
+
+1. Hex values represent values for red, green, and blue in hexadecimal code.
+2. Typography can be defined as “the art and technique of arranging type in order to make language visible”
+3. The font-face rule sets a new font to use that is made via the font family.
+4. The list-style shorthand property allows you to set all the list-style properties at once.
+5. The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.
+6. Create a webpage with an image element and image file. Set the size of the image element to 1000px by 1000px and scale the image to fit the element while respecting the aspect ratio of the image.
