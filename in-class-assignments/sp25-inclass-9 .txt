@@ -1,7 +1,0 @@
-﻿1. Higher-order functions are functions that return a function or take other functions as arguments. 
-2. Functional programming is a declarative programming paradigm style where one applies pure functions in sequence to solve complex problems 
-3. we can access object properties in JS with dot notation or square bracket notation
-4. Logical operators are processed left to right. They short-circuit(stop) as soon as they have a result 
-5. Declarative Programming write code that describes what you want, but not necessarily how to get it.
- 6. Create a function to return true if a given string params includes the word “pinecone”, you can use the .includes builtin string function. Create an array that contains few 
-sentences at different indexes and include pinecone in at least one of them. Use the filter function to create a new array using the function you created.

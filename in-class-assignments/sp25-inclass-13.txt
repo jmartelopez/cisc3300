@@ -1,8 +1,0 @@
-﻿CISC 3300 F24 
-In class assignment 13 
-1. variable names start with a $ in php 
-2. Associative arrays behave a bit like objects in JS or dictionaries in python 
-3. A template literal in PHP would be using a variable inside of a string
-4. php is loosely typed - we don’t set types for variables, they are assigned at runtime 
-5. The required statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. 
-6. Create a PHP application that when accessed via its domain in a browser(localhost) an HTML page is returned. On that HTML page include a button that when clicked makes use of jQuery code to request and show data from the PHP backend.

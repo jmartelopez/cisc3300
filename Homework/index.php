@@ -1,24 +1,22 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+$flowers = [
+    "Rose" => "red",
+    "Sunflower" => "yellow",
+    "Tulip" => "white"
+];
 
-$uri = strtok($_SERVER["REQUEST_URI"], '?');
-$uriArray = explode("/", $uri);
-
-if ($uriArray[1] === 'response' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $response = [
-        'name' => '15 prints',
-        'price' => '$25'
-    ];
-    echo json_encode($response);
-    exit();
+foreach ($flowers as $key => $value) {
+    echo "The color of a $key is $value.<br>";
 }
 
-if ($uriArray[1] === 'form' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo json_encode([
-        'message' => 'Success'
-    ]);
-    exit();
+function describeFlower(string $name, string $color = "unknown"): string {
+    return "The most popular color of a $name is $color.";
 }
 
-include 'homework-5.9.10.html'
+echo describeFlower("Rose", "red") . "<br>";
+echo describeFlower("Sunflower") . "<br>";
+echo "<br>";
+
+include 'homework-6.8.html';
+
 ?>
