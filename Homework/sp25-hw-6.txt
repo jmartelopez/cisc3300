@@ -1,0 +1,27 @@
+﻿CISC 3300 S25 
+Homework 6 
+1. Define hoisting and closures in JS. 
+In JS, hoisting is when variables, functions, and arguments are created within each execution context before they are executed. Closures are the ability of a function to remember the variables and functions that are declared in its outer scope. We can look up, never down. 
+2. What is PHP? What do server side languages do in web development?
+PHP is an interpreted programming language used to build webpages. Server-side languages process user input and interact with other servers.
+ 3. What are some examples of how the PHP and JavaScript programming languages are alike and how they differ? 
+Javascript uses prototype-based OOP, which allows objects to inherit directly from other objects. PHP uses class-based OOP. In regards to memory management, js employs a garbage collector to automatically reclaim memory from objects that are no longer in use. PHP uses a hybrid approach and employs reference counting to manage memory. To handle cyclic reference, they use a garbage collector as well. In regards to Type System, both JS and PHP are dynamically typed. PHP also has static typing. In JS, variables are declared using var, let, and const, while in PHP, variables start with a $. Both use if, else if, and else when it comes to conditionals. For loops, both use for, while, do…while. Both have arithmetic operators, comparison operators, and logical operators.
+
+
+4. Why pick PHP over another server side scripting language like Python or Node? 
+PHP is the proper selection for websites designed for storing and managing content, such as blogs and webstores. It is a language that can easily be mixed with HTML and sufficiently supports most general basic web application functionality. It is easy to learn and widely adopted. Thus, it is well suited for content-driven websites and simple web applications.
+
+
+5. Compare and contrast echo and var_dump. 
+Echo outputs one or more expressions while var_dump dumps information about one or more variables. They are both functions used to return.
+
+
+6. Create a new PHP project, in the index.php file create: 
+a. An associative array with keys and values. 
+b. Loop through the array and echo out a string that contains each key and value. 7. Add to question 6: 
+a. Create a function that has: 
+i. a set return type 
+ii. an optional parameter 
+iii. a typed parameter 
+iv. and call your function with values that have the correct data types 
+8. Create another PHP project that includes a “resources” directory. In the resources directory create an HTML file that has elements to show an image, also place an image in the resources directory. When the domain is accessed in a browser(localhost), return the HTML page with the working image.
