@@ -1,0 +1,32 @@
+﻿CISC 3300 S25 
+Homework 7 
+1. What is a class? What is an object? What is OOP? 
+A class is a template for creating objects. It is required in PHP. It defines properties and methods. Objects are an instance of a class. A PHP variable for an object refers to the dynamic data consisting of the data we set up with the class by using the new keyword. OOP is object-oriented programming that uses objects to structure code.
+
+
+2. Why use an abstract class in OOP? 
+An abstract class is generally used when a class provides some high-level functionality but leaves out certain details that need to be implemented by derived classes. Abstract classes allow the parent to create defaults for methods.
+
+
+3. What are superglobals in PHP? What are some examples of data they provide? 
+In PHP, several predefined variables are “superglobals,” which means they are available in all scopes throughout a script. There is no need to do a global $variable to access them within functions or methods. The $_SERVER_global array is an example of one of the superglobal arrays that the PHP interpreter creates each time a page is requested. Some superglobal variables are $_GET, $_POST, $_FILES, and $_REQUEST. 
+
+
+4. What are the two steps to setting up and using a class via namespaces?
+Step 1: Define a namespace in the class to be used
+Step 2: In the place we want to use the class, there are two options: typing out the full namespace every time we want to use that class or importing the class into the current namespace with the use keyword.
+
+
+ 5. What is MVC? Detail the different parts. 
+MVC is the architectural/design pattern that separates an application into three main logical components: Model, View, and Controller. Each component is built to handle specific development aspects of an application. It isolates the business logic and presentation layer from each other. The Model component corresponds to all the data-related logic that the user works with. This can represent either the data that is being transferred between the View and Controller components or any other business logic-related data. It can add or retrieve data from the database. The Model class creates models using data to represent things, such as users, personnel, customers, clients, etc. The controller class is the component that enables the interconnection between the views and the model, so it acts as an intermediary. It processes all the business logic and incoming requests, manipulates data using the model component, and interacts with the view to render the final output. The View component is used for all the application's UI logic. It generates a user interface for the user. Views are created using the data collected by the model component. It only interacts with the controller
+.
+6. If I had a resource called users in my application that was designed with RESTFUL URI design, what would the URI and HTTP verbs be for: 
+a. getting all users  /users GET
+b. getting one users /users/123(ID) GET
+c. saving a user /users POST
+d. editing a user /users/123(ID) PATCH or PUT
+e. deleting a user  /users/123(ID) DELETE
+
+
+7. Create a PHP project in an MVC style. It should have the ability to submit a new note resource, a note should have a title and a description. The title of the note should be more than 3 characters long and the description should be more than 10 characters long. Any special characters should be converted to HTML entities. On the frontend show a success message if the request is successful and an error message if anything is wrong. Add some basic styling. 
+a. no need for a model class, the validation can happen in a controller method.
