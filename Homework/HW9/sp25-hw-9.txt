@@ -1,0 +1,23 @@
+﻿CISC 3300 S25 
+Homework 9 
+1. What are relationships in SQL? Joins? 
+Relationships in SQL are the established associations between two or more tables. They are based on common fields from more than one table, often involving primary and foreign keys. Joins in SQL allows you to request data from more than one table. Some types of joins are the left join and the inner join. The left join keyword returns all records from the left table and the matching records from the right table. The inner join keyword selects records that have matching values in both tables.
+
+
+2. How do joins and relationships interact? 
+Joins get data from two related tables and the nature of that relationship determines how we will use the join. Primary and foreign keys describe how data can relate to data in a row in another table. Joins are generally how we implement relationships in SQL.
+
+
+3. What’s a PDO? a DSN? 
+PDOs are built-in classes that come packaged with PHP, making it very easy to interact with databases. They represent and manage the connection to the database. Via PDOs, PHP is going to take SQL as input, return results from the database, and store it in a variable. A DSN(Data Source Name) is a string that contains information about the connection to our database. This information contains passwords and should come from an .env file.
+
+
+4. What are prepared statements? Why do we need them? 
+A prepared statement is a parameterized and reusable SQL query that forces the developer to write the SQL command and the user-provided data separately. The SQL command is executed safely, preventing SQL Injection vulnerabilities. If we don't have prepared statements, a SQL injection hack could occur.
+
+
+5. What does an .env file do? 
+A .env file is a file that contains environment variables. An environment variable is a variable whose value is set outside the program, typically through a functionality built into the operating system. The .env file will exit in the environment on which we are running our application and set variables specific to that environment.
+
+
+6. Create a PHP project in an MVC style. It should have the ability to search for a product type(use your fictitious business for inspiration), from a MySQL database, and display it. Add some basic styling.
