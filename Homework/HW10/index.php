@@ -39,19 +39,9 @@ if ($uriArray[1] === 'api' && $uriArray[2] === 'products') {
         $productController->updateProduct($id);
     }
 
-    if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-        $idOrName = isset($uriArray[3]) ? $uriArray[3] : null; 
-
-        if ($idOrName) {
-            $productController->deleteProduct($idOrName); 
-        } else {
-            http_response_code(400);
-            echo json_encode(['error' => 'Product ID or name is required']);
-        }
-    
-        exit();
+    if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && $id) {
+        $productController->deleteProduct($id);
     }
-    
 
     exit();
 }
